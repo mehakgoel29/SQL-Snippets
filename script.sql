@@ -17,9 +17,13 @@ and other SQL commands to specify which records you want to work with.
 */
 select * from customers where customer_state="MG";
 select * from orders where order_status="canceled";
-select * from payments where (payment_type="UPI" or payment_type="credit_card") and payment_value>=1000;
-
+select * from payments where not((payment_type="UPI" or payment_type="credit_card") and payment_value>=1000);
 /* NOT has the highest priority and will be evaluated first.
 AND has a higher precedence than OR, so it will be evaluated before OR when no brackets are used.
 OR has the lowest precedence, so it will be evaluated last unless brackets are used to explicitly change the order.*/
 
+select * from payments where payment_value between 100 and 200;
+/* The BETWEEN operator is used in SQL to filter the results within a specific range of values. 
+It is often used in SELECT, UPDATE, and DELETE queries to specify a range for numeric, date, or 
+text values.
+*/
