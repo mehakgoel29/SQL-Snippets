@@ -8,3 +8,6 @@ SELECT
 FROM
     orders;
     
+
+select datediff(order_delivered_customer_date,order_estimated_delivery_date) from orders;
+select datediff(order_estimated_delivery_date,order_delivered_customer_date) from orders;

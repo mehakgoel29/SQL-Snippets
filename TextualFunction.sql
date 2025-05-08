@@ -1,7 +1,6 @@
 -- 1. LENGTH(str) :Returns the length in bytes of the string.When working with storage or encoding
 select customer_city , length(customer_city ) from customers;  
 
-
 -- 2.Trim() removes extra leading and tailing spaces from string
 select customer_city,length(trim(customer_city)) from customers;
 
